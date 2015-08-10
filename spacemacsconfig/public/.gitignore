@@ -1,0 +1,4 @@
+# Ignore emacs.d.symlink
+# It will be first cloned and then symlinked
+# during the setup
+emacs.d.symlink
