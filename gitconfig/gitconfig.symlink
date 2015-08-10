@@ -1,6 +1,6 @@
 [user]
 	name = Gokhan Karabulut
-	email = gokhanettin@gmail.com
+	email = gokhan.karabulut@tubitak.gov.tr
 [core]
 	editor = vim
 	autocrlf = false
