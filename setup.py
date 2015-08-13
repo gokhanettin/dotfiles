@@ -12,7 +12,7 @@
 
 # --- USAGE ---
 # python setup.py [<config-name1> <config-name2> ...]
-# e.g. python setup.py vimconfig cmderconfig
+# e.g. python2 setup.py vimconfig cmderconfig
 # If no cofig-name supplied, configures all configs available.
 
 import os
