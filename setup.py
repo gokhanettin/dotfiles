@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 # WARNING: python2.7 required.
 # In Windows, run this file with admin privileges.
