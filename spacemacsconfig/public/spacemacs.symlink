@@ -28,13 +28,15 @@
                my-c-c++-enable-clang-support t
                my-c-c++-default-mode-for-headers 'c++-mode)
      ;; better-defaults
+     extra-langs
+     javascript
      emacs-lisp
      git
      markdown
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      syntax-checking
      version-control
      )
