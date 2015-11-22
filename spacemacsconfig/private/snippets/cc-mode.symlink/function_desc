@@ -1,0 +1,28 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# cotributor: Gokhan Karabulut <gokhanettin@gmail.com>
+# name: Doxygen function description
+# key: @fn
+# --
+/**
+ * @fn ${1:return_value function(parameter_type parameter)}
+ * @brief   ${2:A brief description, one sentence, one line.}
+ *
+ * ${3:A detailed description of the functionality, it can span over
+ * multiple lines, can be omitted.}
+ *
+ * @pre     ${4:Prerequisites about the use of the functionality, there can be
+ *          more than one "pre" tags, can be omitted.}
+ * @post    ${5:Postrequisites about the use of the functionality, there can be
+ *          more than one "post" tags, can be omitted.}
+ * @note    ${6:There can be one or more notes, can be omitted.}
+ *
+ * @param[in] p1        ${7:description of parameter one}
+ * @param[out] p2       ${8:description of parameter two}
+ * @param[in,out] p3    ${9:description of parameter three}
+ * @return              ${10:Description of the returned value, must be omitted if
+ *                      a function returns void.}
+ * @retval VALUE1       ${11:description of the special returned value one, can be
+ *                      omitted.}
+ * @retval VALUE2       ${12:description of the special returned value two, can be
+ *                      omitted.}
+ */

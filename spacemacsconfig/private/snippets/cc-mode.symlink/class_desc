@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# cotributor: Gokhan Karabulut <gokhanettin@gmail.com>
+# name: Doxygen class description
+# key: @class
+# --
+/**
+ * @class ${1:Class}
+ * @brief   ${2:A brief description, one sentence, one line.}
+ *
+ * ${3:A detailed description of the functionality, it can span over
+ * multiple lines, can be omitted.}
+ */
