@@ -16,13 +16,13 @@
  *          more than one "post" tags, can be omitted.}
  * @note    ${6:There can be one or more notes, can be omitted.}
  *
- * @param[in] p1        ${7:description of parameter one}
- * @param[out] p2       ${8:description of parameter two}
- * @param[in,out] p3    ${9:description of parameter three}
- * @return              ${10:Description of the returned value, must be omitted if
+ * @param[${7:in}] ${8:p1}        ${9:description of parameter one}
+ * @param[${10:out}] ${11:p2}       ${12:description of parameter two}
+ * @param[${13:in,out}] ${14:p3}    ${15:description of parameter three}
+ * @return              ${16:Description of the returned value, must be omitted if
  *                      a function returns void.}
- * @retval VALUE1       ${11:description of the special returned value one, can be
+ * @retval VALUE1       ${17:description of the special returned value one, can be
  *                      omitted.}
- * @retval VALUE2       ${12:description of the special returned value two, can be
+ * @retval VALUE2       ${18:description of the special returned value two, can be
  *                      omitted.}
  */
