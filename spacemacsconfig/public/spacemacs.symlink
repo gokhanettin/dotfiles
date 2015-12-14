@@ -203,10 +203,10 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (setq-default c-default-style "linux"
-                tab-width 8
-                indent-tabs-mode t)
-  ;; (setq-default c-basic-offset 4)
+  ;; (setq-default c-default-style "linux"
+  ;;               tab-width 8
+  ;;               indent-tabs-mode t)
+  (setq-default c-basic-offset 4)
 )
 
 
