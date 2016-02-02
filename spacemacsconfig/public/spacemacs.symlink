@@ -27,6 +27,7 @@ values."
      (my-c-c++ :variables
                my-c-c++-enable-clang-support t
                my-c-c++-default-mode-for-headers 'c++-mode)
+     gtags
      ;; better-defaults
      extra-langs
      javascript
