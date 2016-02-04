@@ -114,14 +114,14 @@
                  (flags (if cc-file (company-mode/load-clang-complete-file cc-file) '())))
             (setq-local company-clang-arguments flags)
             (setq flycheck-clang-args flags)
-            (setq company-c-headers-path-system
+            (setq-local company-c-headers-path-system
                   (remove-if nil
                              (mapcar #'(lambda (flag)
                                          (when (string-match "^-isystem" flag)
                                            (replace-match "" t t flag)))
                                      flags)))
 
-            (setq company-c-headers-path-user
+            (setq-local company-c-headers-path-user
                   (remove-if nil
                              (mapcar #'(lambda (flag)
                                          (when (string-match "^-I" flag)
