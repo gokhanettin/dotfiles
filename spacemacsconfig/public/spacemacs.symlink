@@ -29,9 +29,10 @@ values."
                my-c-c++-default-mode-for-headers 'c++-mode)
      gtags
      ;; better-defaults
-     extra-langs
+     rust
      javascript
      emacs-lisp
+     extra-langs
      git
      markdown
      org
@@ -198,6 +199,7 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
+  (setq-default rust-enable-racer t)
   )
 
 (defun dotspacemacs/user-config ()
