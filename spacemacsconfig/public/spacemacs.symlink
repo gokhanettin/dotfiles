@@ -30,6 +30,7 @@ values."
      gtags
      ;; better-defaults
      rust
+     python
      javascript
      emacs-lisp
      extra-langs
