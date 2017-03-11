@@ -1,9 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# cotributor: Gokhan Karabulut <gokhanettin@gmail.com>
-# name: header guard 
-# key: hguard
-# --
-#ifndef ${1:MACRO}
-#define $1
-$0
-#endif /* $1 */
