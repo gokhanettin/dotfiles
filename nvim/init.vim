@@ -33,6 +33,7 @@ Plug 'honza/vim-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'Rip-Rip/clang_complete', {'do': 'make install'}
+Plug 'neomake/neomake'
 
 call plug#end()
 " }}}
@@ -237,23 +238,33 @@ call plug#end()
     endif
     " }}}
 
-    " deoplete.vim {{{
-    if has('nvim') && has('python3')
-        let g:deoplete#enable_at_startup = 1
+    " deoplete.nvim {{{
+    if isdirectory(expand('~/.config/nvim/plugged/deoplete.nvim'))
+        if has('nvim') && has('python3')
+            let g:deoplete#enable_at_startup = 1
+        endif
     endif
     " }}}
 
     " deoplete-jedi {{{
-    if has('nvim') && has('python3')
-        let g:python_host_prog = '/usr/bin/python2'
-        let g:python3_host_prog = '/usr/bin/python3'
-        " let g:deoplete#sources#jedi#show_docstring = 1
+    if isdirectory(expand('~/.config/nvim/plugged/deoplete-jedi'))
+        if has('nvim') && has('python3')
+            let g:python_host_prog = '/usr/bin/python2'
+            let g:python3_host_prog = '/usr/bin/python3'
+            " let g:deoplete#sources#jedi#show_docstring = 1
+        endif
     endif
     " }}}
 
     " clang_complete {{{
-    if has('nvim') && has('python3')
+    if isdirectory(expand('~/.config/nvim/plugged/clang_complete'))
         let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang-3.8.so.1'
+    endif
+    " }}}
+
+    " neomake {{{
+    if isdirectory(expand('~/.config/nvim/plugged/neomake'))
+        let g:neomake_open_list = 2
     endif
     " }}}
 
@@ -287,15 +298,15 @@ call plug#end()
     " Easy navigation with buffers
     nnoremap <silent> <C-x><Right> :bn<CR>
     nnoremap <silent> <C-x><Left>  :bp<CR>
-    " tnoremap <silent> <C-x><Right> :bn<CR>
-    " tnoremap <silent> <C-x><Left>  :bp<CR>
 
     " Easy navigation with tabs
     nnoremap <silent> <C-Right> :tabn<CR>
     nnoremap <silent> <C-Left>  :tabp<CR>
 
-    " Terminal escape
-    tnoremap <Esc> <C-\><C-n>
+    if has('nvim')
+        " Terminal escape
+        tnoremap <Esc> <C-\><C-n>
+    endif
 " }}}
 
 " vim: set sw=4 ts=4 sts=4 et tw=80 foldlevel=0 foldmethod=marker:
