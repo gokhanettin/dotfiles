@@ -287,11 +287,15 @@ call plug#end()
     " Easy navigation with buffers
     nnoremap <silent> <C-x><Right> :bn<CR>
     nnoremap <silent> <C-x><Left>  :bp<CR>
+    " tnoremap <silent> <C-x><Right> :bn<CR>
+    " tnoremap <silent> <C-x><Left>  :bp<CR>
 
     " Easy navigation with tabs
     nnoremap <silent> <C-Right> :tabn<CR>
     nnoremap <silent> <C-Left>  :tabp<CR>
 
+    " Terminal escape
+    tnoremap <Esc> <C-\><C-n>
 " }}}
 
 " vim: set sw=4 ts=4 sts=4 et tw=80 foldlevel=0 foldmethod=marker:
