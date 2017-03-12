@@ -188,7 +188,7 @@ call plug#end()
             if &filetype == "help"
                 return ""
             elseif &readonly
-                return "⭤"
+                return "\ue0a2"
             else
                 return ""
             endif
