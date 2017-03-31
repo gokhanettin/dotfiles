@@ -5,14 +5,14 @@ My dotfiles.
 ## Neovim
 
 I use [Linuxbrew][1] to install the latest [neovim][2]. I run the follow
-commands to start using Linuxbrew on my Ubuntu machine.
+commands to add Linuxbrew to my environment path on my Ubuntu machine.
 
 ```bash
 echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.profile
 source ~/.profile
 ```
 
-We also need python interfaces for various plugins.
+We also need python interfaces for various vim plugins.
 
 ```bash
 sudo apt-get install python-pip # Install pip2
@@ -49,7 +49,8 @@ sudo apt-get install clang silversearcher-ag
 
 ```bash
 git clone https://github.com/gokhanettin/dotfiles.git ~/.dotfiles
-make clean # Clean all old setups
+cd ~/.dotfiles
+make clean # Clean up all old setups
 make vim # Vim setup only
 make git # Git setup only
 make     # Setup all
