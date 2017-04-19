@@ -42,7 +42,7 @@ a powerline font you like.
 Other dependencies for various plugins.
 
 ```bash
-sudo apt-get install clang silversearcher-ag
+sudo apt-get install clang silversearcher-ag xsel
 ```
 
 ## Setup
