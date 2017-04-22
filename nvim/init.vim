@@ -34,6 +34,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'Rip-Rip/clang_complete', {'do': 'make install'}
 Plug 'neomake/neomake'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 " }}}
@@ -93,7 +94,7 @@ call plug#end()
     set expandtab " Turn a tab into spaces
     set copyindent " Copy the previous indentation on autoindenting
 
-    set textwidth=80 " Enforce line length
+    set textwidth=79 " Enforce line length
     set colorcolumn=+1 " Highlight the limit of textwidth
     set wrap " Wrap long text in display
 
