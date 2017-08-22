@@ -4,15 +4,10 @@ My dotfiles.
 
 ## Neovim
 
-I use [Linuxbrew][1] to install the latest [neovim][2]. I run the follow
-commands to add Linuxbrew to my environment path on my Ubuntu machine.
+I use [Linuxbrew][1] to install the latest [neovim][2].
 
-```bash
-echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.profile
-source ~/.profile
-```
 
-We also need python interfaces for various vim plugins.
+We need python interfaces for various vim plugins.
 
 ```bash
 sudo apt-get install python-pip # Install pip2

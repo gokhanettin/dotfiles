@@ -35,6 +35,8 @@ Plug 'zchee/deoplete-jedi'
 Plug 'Rip-Rip/clang_complete', {'do': 'make install'}
 Plug 'neomake/neomake'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call plug#end()
 " }}}
