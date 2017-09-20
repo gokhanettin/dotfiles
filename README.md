@@ -4,10 +4,8 @@ My dotfiles.
 
 ## Neovim
 
-I use [Linuxbrew][1] to install the latest [neovim][2].
-
-
-We need python interfaces for various vim plugins.
+Having installed [neovim][1], we need python interfaces for various vim
+plugins.
 
 ```bash
 sudo apt-get install python-pip # Install pip2
@@ -51,5 +49,4 @@ make git # Git setup only
 make     # Setup all
 ```
 
-[1]: http://linuxbrew.sh
-[2]: https://github.com/neovim/neovim/wiki/Installing-Neovim
+[1]: https://github.com/neovim/neovim/wiki/Installing-Neovim
