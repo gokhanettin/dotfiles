@@ -2,51 +2,71 @@
 
 My dotfiles.
 
-## Neovim
+## Vim & Neovim
 
-Having installed [neovim][1], we need python interfaces for various vim
-plugins.
+I use [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) most of
+the time, but vim should also work with my configuration.
 
-```bash
-sudo apt-get install python-pip # Install pip2
-pip2 install neovim
-pip2 install --upgrade neovim # Upgrade with this if you need to
+## Some plugin dependecies
 
-sudo apt-get install python3-pip # Install pip3
-pip3 install neovim
-pip3 install --upgrade neovim # Upgrade with this if you need to
-```
-
-## Fonts
-
-I use `DejaVu Sans Mono for Powerline`. You first have to install poweline fonts
-as follows:
+Install plugin dependecies.
 
 ```bash
-git clone --depth 1 https://github.com/powerline/fonts.git /tmp/fonts
-/tmp/fonts/install.sh
+$ sudo apt-get install silversearcher-ag xsel
 ```
 
-If you are using a terminal, don't forget to create a new terminal profile with
-a powerline font you like.
-
-## Other Dependencies
-
-Other dependencies for various plugins.
+Install powerline fonts.
 
 ```bash
-sudo apt-get install clang silversearcher-ag xsel
+$ git clone --depth 1 https://github.com/powerline/fonts.git /tmp/fonts
+$ /tmp/fonts/install.sh
 ```
+
+If you are using a terminal emulator you may want to create a new profile with
+your favorite powerline font.
 
 ## Setup
 
 ```bash
-git clone https://github.com/gokhanettin/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-make clean # Clean up all old setups
-make vim # Vim setup only
-make git # Git setup only
-make     # Setup all
+$ git clone https://github.com/gokhanettin/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
+$ bash setup.sh --all
 ```
 
-[1]: https://github.com/neovim/neovim/wiki/Installing-Neovim
+Here are all the possible options:
+
+```bash
+$ bash setup.sh -h
+Usage: setup.sh [OPTIONS]
+
+OPTIONS
+   -h, --help           Print this help message
+   --git                Setup git
+   --vim                Setup vim
+   --all                Setup all
+   --refresh            Refresh all links
+   --rm                 Remove all links
+```
+
+## C/C++ Notes
+
+[ycm_extra_conf.py](./nvim/ycm_extra_conf.py) feeds various compilation flags
+to [YouCompleteMe](https://github.com/Valloric/YouCompleteMe). It is capable of
+parsing the nearest `.clang_complete`  file to the current compilation unit
+(i.e. a source file such as *.c, *.cpp). It can also retrieve compilation flags
+from a [compilation
+database](http://clang.llvm.org/docs/JSONCompilationDatabase.html). You can get
+CMake to generate this database by adding `set(CMAKE_EXPORT_COMPILE_COMMANDS
+ON)` to your `CMakeLists.txt` file.
+
+Here is how you can dump default include directories given in
+[clang_complete](./nvim/clang_complete).
+
+```bash
+$ # For C
+$ g++ -E -xc - -v < /dev/null
+$ clang++ -E -xc - -v < /dev/null
+$ # For C++
+$ g++ -E -xc++ - -v < /dev/null
+$ clang++ -E -xc++ - -v < /dev/null
+```

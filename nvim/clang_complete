@@ -1,0 +1,10 @@
+-xc++
+-std=c++11
+-isystem/usr/include/c++/5
+-isystem/usr/include/x86_64-linux-gnu/c++/5
+-isystem/usr/include/c++/5/backward
+-isystem/usr/lib/gcc/x86_64-linux-gnu/5/include
+-isystem/usr/local/include
+-isystem/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+-isystem/usr/include/x86_64-linux-gnu
+-isystem/usr/include
