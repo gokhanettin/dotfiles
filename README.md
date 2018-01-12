@@ -7,12 +7,15 @@ My dotfiles.
 I use [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) most of
 the time, but vim should also work with my configuration.
 
-## Some plugin dependecies
+## Install dependecies
 
-Install plugin dependecies.
+Instal setup and plugin dependecies.
 
 ```bash
-$ sudo apt-get install silversearcher-ag xsel
+$ sudo apt-get install git curl cmake silversearcher-ag xsel python-dev \
+    python-pip python3-dev python3-pip
+$ pip install neovim
+$ pip3 install neovim
 ```
 
 Install powerline fonts.
