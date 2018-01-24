@@ -280,7 +280,7 @@ nnoremap <silent> <C-x><Left>  :bp<CR>
 nnoremap <silent> <C-Right> :tabn<CR>
 nnoremap <silent> <C-Left>  :tabp<CR>
 
-if has('nvim')
+if has('nvim') || has('terminal')
   " Terminal escape
   tnoremap <Esc> <C-\><C-n>
 endif
