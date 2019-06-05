@@ -22,7 +22,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do':
+            \ './install.py --clang-completer --racer-completer'}
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 " }}}
@@ -87,8 +89,17 @@ set shiftwidth=4  " Spaces for autoindents
 set shiftround    " Makes indenting a multiple of shiftwidth
 set copyindent    " Copy the previous indentation on autoindenting
 
-autocmd BufNewFile,BufRead *.vim setlocal et ts=2 sts=2 sw=2
-autocmd BufNewFile,BufRead *.sh setlocal et ts=2 sts=2 sw=2
+augroup filetype_settings
+  autocmd!
+  " ROS launch files are xml files
+  autocmd BufRead,BufNewFile *.launch set filetype=xml
+  " Set local indentation rules
+  autocmd Filetype xml setlocal et ts=2 sts=2 sw=2
+  autocmd Filetype vim setlocal et ts=2 sts=2 sw=2
+  autocmd Filetype sh setlocal et ts=2 sts=2 sw=2
+
+augroup END
+
 
 " Copy/Paste/Cut
 if has('clipboard')
