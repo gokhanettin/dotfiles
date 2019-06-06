@@ -25,6 +25,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'Valloric/YouCompleteMe', { 'do':
             \ './install.py --clang-completer --racer-completer'}
 Plug 'rust-lang/rust.vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 " }}}
@@ -32,7 +33,7 @@ call plug#end()
 " Basic Setup {{{
 " Set saner defaults for vim
 if !has('nvim')
-  filetype plugin indent on  " Load plugin and indent for a specific file
+  syntax off
   set ttyfast                " Indicate fast terminal connection
   set ttymouse=xterm2        " Mouse handling type
   set ttyscroll=3            " Max number of lines to scroll the screen
@@ -45,6 +46,8 @@ if !has('nvim')
   set hlsearch                    " Highlight found text
   set mouse=a                     " Enables mouse in all modes
   set wildmenu                    " Completion with menu
+  filetype plugin indent on  " Load plugin and indent for a specific file
+  syntax on
 endif
 
 " Common basic setup for both vim and neovim
