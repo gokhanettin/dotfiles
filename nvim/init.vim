@@ -84,13 +84,14 @@ set textwidth=79   " Enforce line length
 set colorcolumn=+1 " Highlight the limit of textwidth
 set wrap           " Wrap long text in display
 
-
 set expandtab     " Turn a tab into spaces
 set tabstop=4     " Number of spaces a tab counts for
 set softtabstop=4 " Tab spaces to be inserted/deleted when hit
 set shiftwidth=4  " Spaces for autoindents
 set shiftround    " Makes indenting a multiple of shiftwidth
 set copyindent    " Copy the previous indentation on autoindenting
+
+let g:tex_flavor = 'latex' " Force tex file type
 
 augroup filetype_settings
   autocmd!
@@ -100,9 +101,7 @@ augroup filetype_settings
   autocmd Filetype xml setlocal et ts=2 sts=2 sw=2
   autocmd Filetype vim setlocal et ts=2 sts=2 sw=2
   autocmd Filetype sh setlocal et ts=2 sts=2 sw=2
-
 augroup END
-
 
 " Copy/Paste/Cut
 if has('clipboard')
