@@ -13,7 +13,7 @@ Instal setup and plugin dependecies.
 
 ```bash
 $ sudo apt-get install git curl cmake silversearcher-ag xsel python-dev \
-    python-pip python3-dev python3-pip
+    python-pip python3-dev python3-pip zathura xdotool
 $ pip install neovim
 $ pip3 install neovim
 ```

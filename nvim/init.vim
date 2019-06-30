@@ -91,8 +91,6 @@ set shiftwidth=4  " Spaces for autoindents
 set shiftround    " Makes indenting a multiple of shiftwidth
 set copyindent    " Copy the previous indentation on autoindenting
 
-let g:tex_flavor = 'latex' " Force tex file type
-
 augroup filetype_settings
   autocmd!
   " ROS launch files are xml files
@@ -255,6 +253,13 @@ endif
 " YouCompleteMe {{{
 if isdirectory(expand('$HOME/.vim/plugged/YouCompleteMe'))
   let g:ycm_global_ycm_extra_conf = expand('$HOME/.vim/ycm_extra_conf.py')
+endif
+" }}}
+
+" vimtex {{{
+if isdirectory(expand('$HOME/.vim/plugged/vimtex'))
+  let g:tex_flavor = 'latex' " Force tex file type
+  let g:vimtex_view_method = 'zathura' " use zathura pdf viewer
 endif
 " }}}
 
